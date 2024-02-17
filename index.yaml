@@ -1,8 +1,54 @@
-apiVersion: v1
-entries:
-  - name: my-charts
-    version: 1.0.0
-    urls:
-      - https://github.com/Ahmedhasan44/Oyun-gelistirme/releases/download/v1.0.0/my-chart-1.0.0.tgz
-    created: "2024-02-17T12:34:56.789Z"
-    digest: sha256:abcdef1234567890...
+apiVersion: catalog.cattle.io/v1
+kind: ClusterRepo
+metadata:
+  annotations:
+    field.cattle.io/description: gultekin
+  creationTimestamp: '2024-02-17T14:22:10Z'
+  generation: 1
+  managedFields:
+    - apiVersion: catalog.cattle.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:field.cattle.io/description: {}
+        f:spec:
+          .: {}
+          f:clientSecret: {}
+          f:url: {}
+      manager: agent
+      operation: Update
+      time: '2024-02-17T14:22:10Z'
+    - apiVersion: catalog.cattle.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:downloadTime: {}
+          f:observedGeneration: {}
+      manager: agent
+      operation: Update
+      subresource: status
+      time: '2024-02-17T14:22:10Z'
+  name: ahmethasan
+  resourceVersion: '320962'
+  uid: 0aecd801-ebf4-4a4a-bde3-f7ca45930d34
+spec:
+  clientSecret: null
+  url: https://github.com/Ahmedhasan44/Oyun-gelistirme.git
+status:
+  conditions:
+    - lastUpdateTime: '2024-02-17T14:22:10Z'
+      status: 'True'
+      type: FollowerDownloaded
+    - lastUpdateTime: '2024-02-17T14:22:10Z'
+      message: >-
+        failed to parse response from
+        https://github.com/Ahmedhasan44/Oyun-gelistirme.git/index.yaml
+      reason: Error
+      status: 'False'
+      type: Downloaded
+  downloadTime: null
+  observedGeneration: 0
